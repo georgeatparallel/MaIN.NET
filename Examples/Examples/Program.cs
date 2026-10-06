@@ -47,6 +47,7 @@ static void RegisterExamples(IServiceCollection services)
 {
     services.AddTransient<ExampleRegistry>();
     services.AddTransient<McpExample>();
+    services.AddTransient<ParallelSearchMcpExample>();
     services.AddTransient<ChatExample>();
     services.AddTransient<ChatCustomGrammarExample>();
     services.AddTransient<ChatWithFilesExample>();
@@ -211,6 +212,7 @@ namespace Examples
                 ("\u25a0 xAI Chat", serviceProvider.GetRequiredService<ChatExampleXai>()),
                 ("\u25a0 Ollama Chat", serviceProvider.GetRequiredService<ChatExampleOllama>()),
                 ("\u25a0 McpClient example", serviceProvider.GetRequiredService<McpExample>()),
+                ("\u25a0 Parallel Search MCP", serviceProvider.GetRequiredService<ParallelSearchMcpExample>()),
                 ("\u25a0 McpAgent example", serviceProvider.GetRequiredService<McpAgentsExample>()),
                 ("\u25a0 Chat with TTS example", serviceProvider.GetRequiredService<ChatWithTextToSpeechExample>()),
                 ("\u25a0 McpAgent example", serviceProvider.GetRequiredService<McpAgentsExample>()),
